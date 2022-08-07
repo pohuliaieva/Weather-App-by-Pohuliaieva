@@ -101,10 +101,15 @@ input[type='text'] {
 
 }
 
+#lastupdate {
+  font-weight: normal;
+}
+
 .city-info,
 .city-sky {
   color: white;
   font-size: 17px;
+  text-transform: capitalize;
 }
 
 .music-recom {
@@ -204,6 +209,9 @@ input[type='text'] {
   fill: #fff;
 }
 
+#card-img-hum {
+  padding: 20px 20px 10px 20px;
+}
 
 .card-text-detail {
   font-size: 13px;
@@ -222,7 +230,7 @@ input[type='text'] {
 
 #metrick-wind,
 #metrick-pressure,
-#metrick-uv,
+#humidity,
 #metrick-water {
   font-size: 35px;
 }
