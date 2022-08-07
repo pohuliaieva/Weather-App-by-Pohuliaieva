@@ -99,6 +99,16 @@ input[type='text'] {
   font-size: 45px;
   font-weight: 800;
 
+
+}
+
+.city-main-name {
+
+  margin-top: 16px;
+}
+
+.city-main-temp {
+  margin-bottom: 5px;
 }
 
 #lastupdate {
@@ -110,6 +120,10 @@ input[type='text'] {
   color: white;
   font-size: 17px;
 
+}
+
+.city-info {
+  padding-top: 5px;
 }
 
 .city-info:first-letter,

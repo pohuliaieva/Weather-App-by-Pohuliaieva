@@ -15,7 +15,6 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-    console.log(response.data);
     let cityElement = document.querySelector("#citymain");
     let temperatureElement = document.querySelector("#temperaturemain");
     let descriptionmainElement = document.querySelector("#descriptionmain");
@@ -23,6 +22,7 @@ function displayTemperature(response) {
     let pressureElement = document.querySelector("#metrick-pressure");
     let humidityElement = document.querySelector("#humidity");
     let updateElement = document.querySelector("#lastupdate");
+    let iconElement = document.querySelector("#icon");
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
     cityElement.innerHTML = (response.data.name);
     descriptionmainElement.innerHTML = (response.data.weather[0].description);
@@ -30,8 +30,12 @@ function displayTemperature(response) {
     pressureElement.innerHTML = (response.data.main.pressure);
     humidityElement.innerHTML = Math.round(response.data.main.humidity);
     updateElement.innerHTML = formatDate(response.data.dt * 1000);
+    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute("alt", `${response.data.weather[0].description}`);
 }
 
+
 let apiKey = "49813f7b6218c304bf646ff9c4c866c4";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=lisbon&appid=${apiKey}&units=metric`;
+let city = "Madrid";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
