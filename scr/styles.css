@@ -1,0 +1,289 @@
+@media (max-width: 768px) {
+
+  #weather-week-card,
+  #card-details,
+  .music-block {
+    margin-bottom: 20px;
+  }
+
+
+}
+
+
+body {
+  font-family: 'Montserrat', 'Raleway', sans-serif;
+
+
+}
+
+#btn-search:hover {
+  font-size: 15px;
+  text-transform: uppercase;
+  background: transparent;
+  color: blanchedalmond;
+  border: 2px solid;
+  padding: 10px 50px;
+  margin-left: 10px;
+  border-radius: 100px;
+  height: -webkit-fill-available;
+
+
+}
+
+#btn-search {
+  font-size: 15px;
+  text-transform: uppercase;
+  background: radial-gradient(circle at 10% 20%, rgb(246, 98, 128) 0%, rgb(248, 129, 135) 98.3%);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 50px;
+  margin-left: 10px;
+  font-weight: 500;
+  border-radius: 100px;
+  height: -webkit-fill-available;
+  transition: all 300ms ease;
+}
+
+.search {
+  margin-top: 20px;
+  max-height: 50px;
+  display: inline-flex;
+
+}
+
+.form-control {
+  padding: 10px 50px 10px 10px;
+
+  border-color: #fff 50%;
+  border: 2px solid;
+  border-radius: 100px;
+
+
+}
+
+input[type='text'] {
+  font-size: 15px;
+  color: rgb(148, 62, 228);
+  opacity: 100%;
+}
+
+#city {
+  color: rgb(148, 62, 228);
+
+}
+
+.first-part {
+  background: linear-gradient(109.6deg, rgb(61, 106, 239) 11.2%, rgb(122, 14, 190) 70.2%);
+  border-radius: 0 0 100px 100px;
+  padding-bottom: 50px;
+  box-shadow: 0px 3px 25px 5px rgba(80, 5, 99, 0.55);
+}
+
+
+
+.temperature {
+
+  padding: 30px 20px;
+  margin-top: 30px;
+  border-radius: 2px;
+
+}
+
+.city-main-name {
+  font-family: 'Raleway';
+}
+
+.city-main-name,
+.city-main-temp {
+  color: white;
+  font-size: 45px;
+  font-weight: 800;
+
+}
+
+.city-info,
+.city-sky {
+  color: white;
+  font-size: 17px;
+}
+
+.music-recom {
+  margin-top: 30px;
+  padding: 30px 0px;
+  background-color: rgb(255, 255, 255);
+  max-width: 100%;
+  border-radius: 2px;
+}
+
+.music-block {
+  background-color: #79c2d0;
+  color: #0f004a;
+
+  padding: 30px 0px;
+  display: flex;
+  border-radius: 35px;
+}
+
+.music-name,
+.info-head {
+  font-size: 17px;
+  font-weight: 800;
+  margin: 15px 0px 5px 20px;
+  text-transform: uppercase;
+}
+
+.music-playlist,
+.info-text {
+  font-size: 17px;
+  margin-left: 20px;
+}
+
+.playlist-play {
+  margin-top: 15px;
+  margin-left: 20px;
+  max-width: 100%;
+  display: flex;
+  padding-right: 10px;
+}
+
+#weather-week-card {
+  border-radius: 15px;
+  text-transform: capitalize;
+  text-align: center;
+  background: radial-gradient(circle at 10% 20%, rgb(246, 98, 128) 0%, rgb(248, 129, 135) 98.3%);
+
+}
+
+#weather-week-card-text,
+.copy {
+  text-align: center;
+
+}
+
+.copy {
+  padding-top: 30px;
+  color: #ffffff;
+}
+
+.copy a {
+  color: #f39186;
+  text-decoration: none;
+
+}
+
+.copy a:hover {
+  color: #ffffff;
+  text-decoration: #f39186 underline 3px;
+
+}
+
+.block-recomendations {
+
+  padding: 30px 30px;
+  background-color: #79c2d0;
+  color: #0f004a;
+
+  border-radius: 35px;
+  display: flex;
+}
+
+.like-icon {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: rgba(72, 3, 137, 0.25);
+  border: none;
+  border-radius: 35px;
+}
+
+.card-img-top {
+  width: 90px;
+  padding: 20px;
+  fill: #fff;
+}
+
+
+.card-text-detail {
+  font-size: 13px;
+}
+
+.weather-details,
+.ic-weather,
+.card-title {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+
+}
+
+
+
+#metrick-wind,
+#metrick-pressure,
+#metrick-uv,
+#metrick-water {
+  font-size: 35px;
+}
+
+
+
+.card-title,
+.card-text-detail {
+  color: rgb(255, 255, 255);
+
+}
+
+.card-title {
+  padding-bottom: 20px;
+}
+
+.weather-week,
+.card-text {
+  text-align: left;
+  color: rgb(255, 255, 255);
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.weather-week {
+  margin-top: 25px;
+}
+
+.ic-weather {
+  font-size: 55px;
+  text-align: center;
+}
+
+.weather-week .card,
+.graphic {
+  background: rgb(48, 48, 48);
+}
+
+.graphic {
+  margin-top: 20px;
+}
+
+.history-head {
+  color: azure;
+  font-size: 30px;
+  text-align: left;
+  margin-top: 55px;
+  text-transform: uppercase;
+}
+
+.img-history {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 55px;
+}
+
+.footer {
+  margin-top: 50px;
+  background: linear-gradient(109.6deg, rgb(61, 106, 239) 11.2%, rgb(122, 14, 190) 70.2%);
+  border-radius: 100px 100px 0 0;
+  padding-bottom: 50px;
+  box-shadow: 0px 3px 25px 5px rgba(80, 5, 99, 0.55);
+  max-width: 100%;
+}
