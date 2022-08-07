@@ -34,4 +34,4 @@ function displayTemperature(response) {
 
 let apiKey = "49813f7b6218c304bf646ff9c4c866c4";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=lisbon&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayTemperature).then(formatDate);
+axios.get(apiUrl).then(displayTemperature);
