@@ -109,6 +109,11 @@ input[type='text'] {
 .city-sky {
   color: white;
   font-size: 17px;
+
+}
+
+.city-info:first-letter,
+.city-sky:first-letter {
   text-transform: capitalize;
 }
 
