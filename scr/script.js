@@ -22,6 +22,8 @@ function getForecast(coordinates) {
 
 }
 
+
+
 function displayTemperature(response) {
     let cityElement = document.querySelector("#citymain");
     let temperatureElement = document.querySelector("#temperaturemain");
@@ -79,30 +81,43 @@ function displayCelsiusTemp(event) {
     let tempElement = document.querySelector("#temperaturemain");
     tempElement.innerHTML = Math.round(celsiusTemperature);
 }
+function formatDay(timestamp) {
+    let date = new Date(timestamp * 1000);
+    let day = date.getDay();
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    return days[day];
+
+}
 
 function displayForecast(response) {
-    console.log(response.data.daily);
+    let forecast = response.data.daily;
+
     let forecastElement = document.querySelector("#weather-week");
     let forecastHTML = `<div class="container">
         <div class="row ">`;
-    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    days.forEach(function (day) {
-        forecastHTML = forecastHTML + `
+
+    forecast.forEach(function (forecastDay, index) {
+        if (index < 6) {
+            forecastHTML = forecastHTML + `
             <div class="col col-sm-6 col-md-2 col-xs-4">
                 <div class="card" id="weather-week-card">
-                    <div class="ic-weather"> ⛅</div>
+                    <div class="ic-weather"> <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" id="icon">
+                     </div>
 
                     <div class="card-body">
-                        <h5 class="card-title">${day}</h5>
-                        <p class="card-text" id="weather-week-card-text"> <span class="week-temp-max">25</span>°C - <span
-                            class="week-temp-min">25</span><span class="min-metrik">°C</span> </p>
-                    </div>
-                </div>
-            </div>
+                        <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
+                        <p class="card-text" id="weather-week-card-text"> <span class="week-temp-max">${Math.round(forecastDay.temp.max)}</span >°C - <span
+                            class="week-temp-min">${Math.round(forecastDay.temp.min)}</span><span class="min-metrik">°C</span> </p >
+                    </div >
+                    </div >
+            </div >
             `;
+        }
     });
-    forecastHTML = forecastHTML + `</div>
-          </div>`;
+
+    forecastHTML = forecastHTML + `</div >
+          </div > `;
     forecastElement.innerHTML = forecastHTML;
 
 }
