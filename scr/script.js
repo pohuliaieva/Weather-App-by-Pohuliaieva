@@ -14,6 +14,14 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`;
 }
 
+function getForecast(coordinates) {
+    let apiKey = "49813f7b6218c304bf646ff9c4c866c4";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(displayForecast);
+
+}
+
 function displayTemperature(response) {
     let cityElement = document.querySelector("#citymain");
     let temperatureElement = document.querySelector("#temperaturemain");
@@ -35,6 +43,8 @@ function displayTemperature(response) {
     updateElement.innerHTML = formatDate(response.data.dt * 1000);
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     iconElement.setAttribute("alt", `${response.data.weather[0].description}`);
+
+    getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -69,6 +79,34 @@ function displayCelsiusTemp(event) {
     let tempElement = document.querySelector("#temperaturemain");
     tempElement.innerHTML = Math.round(celsiusTemperature);
 }
+
+function displayForecast(response) {
+    console.log(response.data.daily);
+    let forecastElement = document.querySelector("#weather-week");
+    let forecastHTML = `<div class="container">
+        <div class="row ">`;
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    days.forEach(function (day) {
+        forecastHTML = forecastHTML + `
+            <div class="col col-sm-6 col-md-2 col-xs-4">
+                <div class="card" id="weather-week-card">
+                    <div class="ic-weather"> ⛅</div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">${day}</h5>
+                        <p class="card-text" id="weather-week-card-text"> <span class="week-temp-max">25</span>°C - <span
+                            class="week-temp-min">25</span><span class="min-metrik">°C</span> </p>
+                    </div>
+                </div>
+            </div>
+            `;
+    });
+    forecastHTML = forecastHTML + `</div>
+          </div>`;
+    forecastElement.innerHTML = forecastHTML;
+
+}
+
 
 let fahrenheitLink = document.querySelector("#faren");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);

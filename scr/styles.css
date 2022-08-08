@@ -260,6 +260,11 @@ a {
 }
 
 
+.week-temp-min,
+.min-metrik {
+  opacity: 70%;
+}
+
 #faren a:hover,
 #celsius a:hover {
   color: #fff !important;
