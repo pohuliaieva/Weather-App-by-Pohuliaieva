@@ -16,6 +16,11 @@ body {
 
 }
 
+.unit {
+  position: absolute;
+}
+
+
 #btn-search:hover {
   font-size: 15px;
   text-transform: uppercase;
@@ -107,6 +112,11 @@ input[type='text'] {
 
 .city-main-temp {
   margin-bottom: 5px;
+}
+
+.city-main-temp .active {
+  color: #fff !important;
+  cursor: default;
 }
 
 #lastupdate {
@@ -245,13 +255,14 @@ input[type='text'] {
 
 #faren,
 a {
-  color: #f39186 !important;
+  color: #f39186;
   text-decoration: none;
 }
 
-#faren,
-a:hover {
-  color: #fff;
+
+#faren a:hover,
+#celsius a:hover {
+  color: #fff !important;
 
 }
 
