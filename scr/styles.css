@@ -243,7 +243,21 @@ input[type='text'] {
 
 }
 
+#faren,
+a {
+  color: #f39186 !important;
+  text-decoration: none;
+}
 
+#faren,
+a:hover {
+  color: #fff;
+
+}
+
+#metric {
+  font-size: 25px;
+}
 
 #metrick-wind,
 #metrick-pressure,
