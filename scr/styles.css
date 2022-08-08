@@ -53,9 +53,7 @@ body {
 
 .form-control {
   padding: 10px 50px 10px 10px;
-
-  border-color: #fff 50%;
-  border: 2px solid;
+  border: #fff 2px solid;
   border-radius: 100px;
 
 
